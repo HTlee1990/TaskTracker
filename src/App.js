@@ -56,7 +56,6 @@ function App() {
 
   const addTask = async (task) => {
     const res = await axios.post(`http://localhost:5000/tasks`, task);
-    console.log(res);
     setTasks([...tasks, res.data]);
     // const id = Math.floor(Math.random() * 10000) +1
     // const newTask = {id, ...task}

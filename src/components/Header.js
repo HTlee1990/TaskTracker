@@ -4,11 +4,10 @@ import Button from "./Button";
 
 const Header = ({ title, onAdd, showAddTask }) => {
   const location = useLocation()
-  console.log(location)
   return (
     <header className="header">
       <h1>Task {title}</h1>
-      {location.pathname === '/' && <Button
+      {(location.pathname === '/' ) && <Button
         onClick={onAdd}
         color={showAddTask ? "#003300" : "steelblue"}
         text={showAddTask ? "Close" : "Add"}
